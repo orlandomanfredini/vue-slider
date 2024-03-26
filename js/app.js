@@ -3,7 +3,6 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        activeElement : {},
         activeImg : 0,
         lastImg : 4,
         message : 'Slider Vue',
@@ -44,17 +43,17 @@ const { createApp } = Vue
 
         next(){
             this.activeImg++
-            if(this.activeImg===this.lastImg){
+            if(this.activeImg > this.lastImg){
                 this.activeImg = 0;
                 return this.activeImg
             }
         },
 
-        clickImg(element){
+        clickImg(index){
             
-            console.log
+            this.activeImg = index
 
-
+            return this.activeImg
         }
 
         

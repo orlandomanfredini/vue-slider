@@ -29,7 +29,7 @@
                         <i class="fa-solid fa-arrow-up" @click="prev()"></i>
                         <i class="fa-solid fa-arrow-down" @click="next()"></i>
 
-                        <img v-for="slide in slides" :src="slide.image" @click="clickImg(slide[activeImg])" alt="">
+                        <img v-for="(slide, i) in slides" :src="slide.image" @click="clickImg(i)" alt="">
                     </div>
                 </div>
             </div>
