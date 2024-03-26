@@ -17,6 +17,7 @@
                 <div class="col-10">
                     <div class="item">
                         <img :src="slides[activeImg].image" alt="">
+                        
                         <div class="text">
                             <h3>{{slides[activeImg].title}}</h3>
                             <p>{{slides[activeImg].text}}</p>
@@ -25,10 +26,10 @@
                 </div>
                 <div class="col-2">
                     <div class="tumb">
-                        <i class="fa-solid fa-arrow-up" @click="prev()" "activeImg === lastImg ?"></i>
-                        <i class="fa-solid fa-arrow-down" @click="next()" ></i>
+                        <i class="fa-solid fa-arrow-up" @click="prev()"></i>
+                        <i class="fa-solid fa-arrow-down" @click="next()"></i>
 
-                        <img v-for="slide in slides" :src="slide.image" alt="">
+                        <img v-for="slide in slides" :src="slide.image" @click="clickImg()" alt="">
                     </div>
                 </div>
             </div>

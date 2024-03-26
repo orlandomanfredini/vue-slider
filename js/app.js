@@ -34,17 +34,23 @@ const { createApp } = Vue
     methods: {
         prev(){
             this.activeImg--
+            if(this.activeImg < 0){
+                this.activeImg = 4;
+                return this.activeImg
+
+            }
         },
 
         next(){
             this.activeImg++
-        },
-
-        returnLastImg(){
             if(this.activeImg===this.lastImg){
                 this.activeImg = 0;
-                return activeImg
+                return this.activeImg
             }
+        },
+
+        clickImg(){
+            return   
         }
 
         
