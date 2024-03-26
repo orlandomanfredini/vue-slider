@@ -3,6 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        activeElement : {},
         activeImg : 0,
         lastImg : 4,
         message : 'Slider Vue',
@@ -49,8 +50,11 @@ const { createApp } = Vue
             }
         },
 
-        clickImg(){
-            return   
+        clickImg(element){
+            
+            console.log
+
+
         }
 
         
