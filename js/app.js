@@ -30,6 +30,8 @@ const { createApp } = Vue
                 }
             ],
         }
+        
+       
     },
     methods: {
         prev(){
@@ -54,8 +56,12 @@ const { createApp } = Vue
             this.activeImg = index
 
             return this.activeImg
-        }
+        },
 
-        
-    }
+    },
+    mounted(){  //hook
+       setInterval(this.next, 3000)
+
+    },
+    
   }).mount('#app')
